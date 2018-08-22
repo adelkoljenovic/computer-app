@@ -1,10 +1,30 @@
 class ComputersController < ApplicationController
-  def 
+  def index
+    @computers = Computer.all
+  
   end
 
-  def 
+  def show
+  
   end
 
-  def 
+  def new
+  
+  end
+
+  def create
+
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
   end
 end
