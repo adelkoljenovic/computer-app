@@ -8,12 +8,17 @@ class ComputersController < ApplicationController
   end
 
   def new
-    
+
   
   end
 
   def create
-
+    computer = Computer.create(
+      harddrive: params[:harddrive],
+      ram: params[:ram],
+      price: params[:price]
+      )
+    redirect_to "/computers/#{computer.id}"
   end
 
   def edit

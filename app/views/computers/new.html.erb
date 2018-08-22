@@ -1,0 +1,6 @@
+<%= form_tag "/computers", method: :post do %>
+  <p>harddrive: <input type="text" name="harddrive"></p>
+  <p>ram: <input type="text" name="ram"> </p>
+  <p>price: <input type="integer" name="price"></p>
+  <input type="submit" value="create a new computer">
+<% end %>
