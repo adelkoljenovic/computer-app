@@ -22,11 +22,17 @@ class ComputersController < ApplicationController
   end
 
   def edit
-
+    @computer = Computer.find_by(id: params[:id])
   end
 
   def update
-
+    computer = Computer.find_by(id: params[:id])
+    computer.harddrive = params[:harddrive]
+    computer.ram = params[:ram]
+    computer.price = params[:price]
+    computer.save
+    redirect_to "/computers/#{computer.id}"
+ 
   end
 
   def destroy

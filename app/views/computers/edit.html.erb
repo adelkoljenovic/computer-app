@@ -1,0 +1,6 @@
+<%= form_tag "/computers/#{@computer.id}", method: :patch do %>
+  <p>harddrive: <input type="text" name="harddrive" value="<%= @computer.harddrive %>"></p>
+  <p>ram: <input type="text" name="ram" value="<%= @computer.ram %>"> </p>
+  <p>price: <input type="integer" name="price" value="<%= @computer.price %>"></p>
+  <input type="submit" value="edit a computer">
+<% end %>
