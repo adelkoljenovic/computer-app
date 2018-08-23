@@ -36,6 +36,8 @@ class ComputersController < ApplicationController
   end
 
   def destroy
-
+    computer = Computer.find_by(id: params[:id])
+    computer.destroy
+    redirect_to "/computers"
   end
 end
